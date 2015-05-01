@@ -13,6 +13,11 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        reversiwindow.cpp
+        reversiwindow.cpp \
+    Reversi.cpp
 
-HEADERS  += reversiwindow.h
+HEADERS  += reversiwindow.h \
+    Reversi.h
+
+RESOURCES += \
+    resources.qrc

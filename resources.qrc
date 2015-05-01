@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/shaders">
+        <file>reversi.frag</file>
+        <file>reversi.vert</file>
+    </qresource>
+</RCC>
