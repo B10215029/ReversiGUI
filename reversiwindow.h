@@ -20,6 +20,9 @@ protected:
 	void mousePressEvent(QMouseEvent *event);
 	GLuint loadShaders(const char* vertexFilePath, const char* fragmentFilePath);
 	Reversi *reversi;
+	int width,height;
+	GLuint resolutionUniform;
+	GLuint dataUinform;
 };
 
 #endif // REVERSIWINDOW_H

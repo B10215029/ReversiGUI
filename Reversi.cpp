@@ -1,4 +1,4 @@
-#define MIN(a,b) ((a) < (b) ? (a) : (b))
+ï»¿#define MIN(a,b) ((a) < (b) ? (a) : (b))
 #include "Reversi.h"
 #include <iostream>
 #include <string>
@@ -29,53 +29,53 @@ void Reversi::restart(){
 
 void Reversi::display(){
 	string msg =
-		"¢z¢w¢s¢w¢s¢w¢s¢w¢s¢w¢s¢w¢s¢w¢s¢w¢{¢z¢w¡@\n"
-		"¢x¡@¢x¡@¢x¡@¢x¡@¢x¡@¢x¡@¢x¡@¢x¡@¢x¢x¢Ï¡@\n"
-		"¢u¢w¢q¢w¢q¢w¢q¢w¢q¢w¢q¢w¢q¢w¢q¢w¢t¢z¢w¡@\n"
-		"¢x¡@¢x¡@¢x¡@¢x¡@¢x¡@¢x¡@¢x¡@¢x¡@¢x¢x¢Ğ¡@\n"
-		"¢u¢w¢q¢w¢q¢w¢q¢w¢q¢w¢q¢w¢q¢w¢q¢w¢t¢z¢w¡@\n"
-		"¢x¡@¢x¡@¢x¡@¢x¡@¢x¡@¢x¡@¢x¡@¢x¡@¢x¢x¢Ñ¡@\n"
-		"¢u¢w¢q¢w¢q¢w¢q¢w¢q¢w¢q¢w¢q¢w¢q¢w¢t¢z¢w¡@\n"
-		"¢x¡@¢x¡@¢x¡@¢x¡@¢x¡@¢x¡@¢x¡@¢x¡@¢x¢x¢Ò¡@\n"
-		"¢u¢w¢q¢w¢q¢w¢q¢w¢q¢w¢q¢w¢q¢w¢q¢w¢t¢z¢w¡@\n"
-		"¢x¡@¢x¡@¢x¡@¢x¡@¢x¡@¢x¡@¢x¡@¢x¡@¢x¢x¢Ó¡@\n"
-		"¢u¢w¢q¢w¢q¢w¢q¢w¢q¢w¢q¢w¢q¢w¢q¢w¢t¢z¢w¡@\n"
-		"¢x¡@¢x¡@¢x¡@¢x¡@¢x¡@¢x¡@¢x¡@¢x¡@¢x¢x¢Ô¡@\n"
-		"¢u¢w¢q¢w¢q¢w¢q¢w¢q¢w¢q¢w¢q¢w¢q¢w¢t¢z¢w¡@\n"
-		"¢x¡@¢x¡@¢x¡@¢x¡@¢x¡@¢x¡@¢x¡@¢x¡@¢x¢x¢Õ¡@\n"
-		"¢u¢w¢q¢w¢q¢w¢q¢w¢q¢w¢q¢w¢q¢w¢q¢w¢t¢z¢w¡@\n"
-		"¢x¡@¢x¡@¢x¡@¢x¡@¢x¡@¢x¡@¢x¡@¢x¡@¢x¢x¢Ö¡@\n"
-		"¢|¢w¢r¢w¢r¢w¢r¢w¢r¢w¢r¢w¢r¢w¢r¢w¢}¡@¡@¡@\n"
-		"¢z¢w¢z¢w¢z¢w¢z¢w¢z¢w¢z¢w¢z¢w¢z¢w¡@\n"
-		"¢x¢°¢x¢±¢x¢²¢x¢³¢x¢´¢x¢µ¢x¢¶¢x¢·¡@\n"
-		"¡@¡@¡@¡@¡@¡@¡@¡@¡@¡@¡@¡@¡@¡@¡@¡@¡@\n";
-	//Ã¸»s´Ñ¤l
+		"â”Œâ”€â”¬â”€â”¬â”€â”¬â”€â”¬â”€â”¬â”€â”¬â”€â”¬â”€â”â”Œâ”€ã€€\n"
+		"â”‚ã€€â”‚ã€€â”‚ã€€â”‚ã€€â”‚ã€€â”‚ã€€â”‚ã€€â”‚ã€€â”‚â”‚ï¼¡ã€€\n"
+		"â”œâ”€â”¼â”€â”¼â”€â”¼â”€â”¼â”€â”¼â”€â”¼â”€â”¼â”€â”¤â”Œâ”€ã€€\n"
+		"â”‚ã€€â”‚ã€€â”‚ã€€â”‚ã€€â”‚ã€€â”‚ã€€â”‚ã€€â”‚ã€€â”‚â”‚ï¼¢ã€€\n"
+		"â”œâ”€â”¼â”€â”¼â”€â”¼â”€â”¼â”€â”¼â”€â”¼â”€â”¼â”€â”¤â”Œâ”€ã€€\n"
+		"â”‚ã€€â”‚ã€€â”‚ã€€â”‚ã€€â”‚ã€€â”‚ã€€â”‚ã€€â”‚ã€€â”‚â”‚ï¼£ã€€\n"
+		"â”œâ”€â”¼â”€â”¼â”€â”¼â”€â”¼â”€â”¼â”€â”¼â”€â”¼â”€â”¤â”Œâ”€ã€€\n"
+		"â”‚ã€€â”‚ã€€â”‚ã€€â”‚ã€€â”‚ã€€â”‚ã€€â”‚ã€€â”‚ã€€â”‚â”‚ï¼¤ã€€\n"
+		"â”œâ”€â”¼â”€â”¼â”€â”¼â”€â”¼â”€â”¼â”€â”¼â”€â”¼â”€â”¤â”Œâ”€ã€€\n"
+		"â”‚ã€€â”‚ã€€â”‚ã€€â”‚ã€€â”‚ã€€â”‚ã€€â”‚ã€€â”‚ã€€â”‚â”‚ï¼¥ã€€\n"
+		"â”œâ”€â”¼â”€â”¼â”€â”¼â”€â”¼â”€â”¼â”€â”¼â”€â”¼â”€â”¤â”Œâ”€ã€€\n"
+		"â”‚ã€€â”‚ã€€â”‚ã€€â”‚ã€€â”‚ã€€â”‚ã€€â”‚ã€€â”‚ã€€â”‚â”‚ï¼¦ã€€\n"
+		"â”œâ”€â”¼â”€â”¼â”€â”¼â”€â”¼â”€â”¼â”€â”¼â”€â”¼â”€â”¤â”Œâ”€ã€€\n"
+		"â”‚ã€€â”‚ã€€â”‚ã€€â”‚ã€€â”‚ã€€â”‚ã€€â”‚ã€€â”‚ã€€â”‚â”‚ï¼§ã€€\n"
+		"â”œâ”€â”¼â”€â”¼â”€â”¼â”€â”¼â”€â”¼â”€â”¼â”€â”¼â”€â”¤â”Œâ”€ã€€\n"
+		"â”‚ã€€â”‚ã€€â”‚ã€€â”‚ã€€â”‚ã€€â”‚ã€€â”‚ã€€â”‚ã€€â”‚â”‚ï¼¨ã€€\n"
+		"â””â”€â”´â”€â”´â”€â”´â”€â”´â”€â”´â”€â”´â”€â”´â”€â”˜ã€€ã€€ã€€\n"
+		"â”Œâ”€â”Œâ”€â”Œâ”€â”Œâ”€â”Œâ”€â”Œâ”€â”Œâ”€â”Œâ”€ã€€\n"
+		"â”‚ï¼‘â”‚ï¼’â”‚ï¼“â”‚ï¼”â”‚ï¼•â”‚ï¼–â”‚ï¼—â”‚ï¼˜ã€€\n"
+		"ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€\n";
+	//ç¹ªè£½æ£‹å­
 	for (int i = 0; i < 8; ++i){
 		for (int j = 0; j < 8; j++){
 			if (data[step][i][j] == 1)
-				msg.replace(39 + i * 82 + 4 + j * 4, 2, "¡³");
+				msg.replace(39 + i * 82 + 4 + j * 4, 2, "â—‹");
 			else if (data[step][i][j] == 2)
-				msg.replace(39 + i * 82 + 4 + j * 4, 2, "¡´");
+				msg.replace(39 + i * 82 + 4 + j * 4, 2, "â—");
 		}
 	}
-	//³B²z«ö¶s«ö¤Uªº®ÄªG
+	//è™•ç†æŒ‰éˆ•æŒ‰ä¸‹çš„æ•ˆæœ
 	if (rowKey != -1){
-		msg.replace(34 + rowKey * 82, 2, "¡@");
-		msg.replace(36 + rowKey * 82, 2, "¡@");
-		msg.replace(75 + rowKey * 82, 2, "¡@");
-		msg.replace(79 + rowKey * 82, 2, "¢x");
-		msg.replace(118 + rowKey * 82, 2, "¢w");
-		msg.replace(120 + rowKey * 82, 2, "¢}");
+		msg.replace(34 + rowKey * 82, 2, "ã€€");
+		msg.replace(36 + rowKey * 82, 2, "ã€€");
+		msg.replace(75 + rowKey * 82, 2, "ã€€");
+		msg.replace(79 + rowKey * 82, 2, "â”‚");
+		msg.replace(118 + rowKey * 82, 2, "â”€");
+		msg.replace(120 + rowKey * 82, 2, "â”˜");
 	}
 	if (colKey != -1){
-		msg.replace(697+colKey*4, 2, "¡@");
-		msg.replace(699+colKey*4, 2, "¡@");
-		msg.replace(732+colKey*4, 2, "¡@");
-		msg.replace(736+colKey*4, 2, "¢x");
-		msg.replace(769+colKey*4, 2, "¢w");
-		msg.replace(771+colKey*4, 2, "¢}");
+		msg.replace(697+colKey*4, 2, "ã€€");
+		msg.replace(699+colKey*4, 2, "ã€€");
+		msg.replace(732+colKey*4, 2, "ã€€");
+		msg.replace(736+colKey*4, 2, "â”‚");
+		msg.replace(769+colKey*4, 2, "â”€");
+		msg.replace(771+colKey*4, 2, "â”˜");
 	}
-	//­pºâ¶Â´Ñ»P¥Õ´Ñªº¼Æ¶q
+	//è¨ˆç®—é»‘æ£‹èˆ‡ç™½æ£‹çš„æ•¸é‡
 	int b=0,w=0;
 	for(int i=0;i<64;++i){
 		if (data[step][0][i]==1)
@@ -83,14 +83,14 @@ void Reversi::display(){
 		if (data[step][0][i]==2)
 			++w;
 	}
-	//¿é¥X¸ê°T
+	//è¼¸å‡ºè³‡è¨Š
 	char tmpstr[100];
-	sprintf(tmpstr,"¡³:%2d\t¡´:%2d\tNOW->%s\nUndo:Backspace\tRedo:TAB\nRestart:Enter\nAI:SPACE", b, w, round==1?"¡³":"¡´");
+	sprintf(tmpstr,"â—‹:%2d\tâ—:%2d\tNOW->%s\nUndo:Backspace\tRedo:TAB\nRestart:Enter\nAI:SPACE", b, w, round==1?"â—‹":"â—");
 	msg += tmpstr;
 
-	//²M°£µe­±
+	//æ¸…é™¤ç•«é¢
 	system("cls");
-	//printf³t«×¸û§Ö¤ñ¸û¤£·|°{Ã{
+	//printfé€Ÿåº¦è¼ƒå¿«æ¯”è¼ƒä¸æœƒé–ƒçˆ
 	printf("%s",msg.c_str());
 
 }
@@ -125,64 +125,64 @@ bool Reversi::setPiece(int x, int y){
 	if (data[step][x][y] == 0){
 		bool success=false;
 		bool successIndex[8]={};
-		//ÀË¬d¬O§_¥i¦Y
-		//¥ª¤W
+		//æª¢æŸ¥æ˜¯å¦å¯åƒ
+		//å·¦ä¸Š
 		if (data[step][x-1][y-1] == round % 2 + 1)
 			for (int i=2;i<MIN(x,y);++i)
 				if(data[step][x-i][y-i]==round)
 					success = successIndex[0] = true;
 				else if(data[step][x-i][y-i]==0)
 					break;
-		//¤W
+		//ä¸Š
 		if (data[step][x-1][y] == round % 2 + 1)
 			for (int i=2;i<=x;++i)
 				if(data[step][x-i][y]==round)
 					success = successIndex[1] = true;
 				else if(data[step][x-i][y]==0)
 					break;
-		//¥k¤W
+		//å³ä¸Š
 		if (data[step][x-1][y+1] == round % 2 + 1)
 			for (int i=2;i<=MIN(x,7-y);++i)
 				if(data[step][x-i][y+i]==round)
 					success = successIndex[2] = true;
 				else if(data[step][x-i][y+i]==0)
 					break;
-		//¥ª
+		//å·¦
 		if (data[step][x][y-1] == round % 2 + 1)
 			for (int i=2;i<=y;++i)
 				if(data[step][x][y-i]==round)
 					success = successIndex[3] = true;
 				else if(data[step][x][y-i]==0)
 					break;
-		//¥k
+		//å³
 		if (data[step][x][y+1] == round % 2 + 1)
 			for (int i=2;i<=7-y;++i)
 				if(data[step][x][y+i]==round)
 					success = successIndex[4] = true;
 				else if(data[step][x][y+i]==0)
 					break;
-		//¥ª¤U
+		//å·¦ä¸‹
 		if (data[step][x+1][y-1] == round % 2 + 1)
 			for (int i=2;i<=MIN(7-x,y);++i)
 				if(data[step][x+i][y-i]==round)
 					success = successIndex[5] = true;
 				else if(data[step][x+i][y-i]==0)
 					break;
-		//¤U
+		//ä¸‹
 		if (data[step][x+1][y] == round % 2 + 1)
 			for (int i=2;i<=7-x;++i)
 				if(data[step][x+i][y]==round)
 					success = successIndex[6] = true;
 				else if(data[step][x+i][y]==0)
 					break;
-		//¥k¤U
+		//å³ä¸‹
 		if (data[step][x+1][y+1] == round % 2 + 1)
 			for (int i=2;i<MIN(7-x,7-y);++i)
 				if(data[step][x+i][y+i]==round)
 					success = successIndex[7] = true;
 				else if(data[step][x+i][y+i]==0)
 					break;
-		//©ñ¤U´Ñ¤l»P¦Y´Ñ¤l
+		//æ”¾ä¸‹æ£‹å­èˆ‡åƒæ£‹å­
 		if(success){
 			for(int i=0;i<64;++i)
 				data[step+1][0][i]=data[step][0][i];
@@ -212,7 +212,7 @@ bool Reversi::setPiece(int x, int y){
 			if(successIndex[7])
 				for (int i=1;data[step][x+i][y+i]!=round;++i)
 					data[step][x+i][y+i]=round;
-			//´«¤H
+			//æ›äºº
 			round = round % 2 + 1;
 			return true;
 		}
@@ -240,4 +240,8 @@ bool Reversi::redo(){
 
 void Reversi::AI(){
 	for(int i=0;!setPiece(i/8, i%8)&&i<64;++i);
+}
+
+int* Reversi::getData(){
+	return data[step][0];
 }

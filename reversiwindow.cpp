@@ -20,27 +20,47 @@ void ReversiWindow::initializeGL(){
 	initializeOpenGLFunctions();
 	GLuint program = loadShaders(":/shaders/reversi.vert",":/shaders/reversi.frag");
 	glUseProgram(program);
+	resolutionUniform = glGetUniformLocation(program,"resolution");
+	dataUinform = glGetUniformLocation(program,"data");
 }
 
 void ReversiWindow::resizeGL(int w, int h){
+	width = w;
+	height = h;
 	glViewport(0,0,w,h);
 }
 
 void ReversiWindow::paintGL(){
+	glUniform2f(resolutionUniform,width,height);
+	glUniform1iv(dataUinform, 64, reversi->getData());
 	glDrawArrays(GL_TRIANGLE_FAN,0,4);
-	update();
+	//update();
 }
 
 void ReversiWindow::keyPressEvent(QKeyEvent *event){
 	switch(event->key()){
+	case Qt::Key_Tab:
+		reversi->redo();
+		break;
+	case Qt::Key_Backspace:
+		reversi->undo();
+		break;
+	case Qt::Key_Return:
+		reversi->restart();
+		break;
+	case Qt::Key_Space:
+		reversi->AI();
+		break;
 	case Qt::Key_Escape:
 		this->close();
 		break;
 	}
+	update();
 }
 
 void ReversiWindow::mousePressEvent(QMouseEvent *event){
-
+	reversi->setPiece((float)event->x()/width*8, (float)event->y()/height*8);
+	update();
 }
 
 GLuint ReversiWindow::loadShaders(const char* vertexFilePath, const char* fragmentFilePath){

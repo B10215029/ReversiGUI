@@ -13,6 +13,7 @@ public:
 	bool undo();
 	bool redo();
 	void AI();
+	int* getData();
 
 private:
 	int data[64][8][8];
