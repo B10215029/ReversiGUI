@@ -122,7 +122,7 @@ bool Reversi::setKeyUp(char key){
 }
 
 bool Reversi::setPiece(int x, int y){
-	if (data[step][x][y] == 0){
+	if (x >= 0 && x < 8 && y >= 0 && y < 8 && data[step][x][y] == 0){
 		bool success=false;
 		bool successIndex[8]={};
 		//檢查是否可吃

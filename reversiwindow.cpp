@@ -59,7 +59,7 @@ void ReversiWindow::keyPressEvent(QKeyEvent *event){
 }
 
 void ReversiWindow::mousePressEvent(QMouseEvent *event){
-	reversi->setPiece((float)event->x()/width*8, (float)event->y()/height*8);
+	reversi->setPiece((float)event->x()/width*8, (float)event->y()/height*8*1.125);
 	update();
 }
 
