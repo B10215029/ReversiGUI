@@ -1,8 +1,6 @@
 #include "reversiwindow.h"
 #include <QFile>
 #include <QString>
-#include <iostream>
-#include <vector>
 #include <QKeyEvent>
 #include <QMouseEvent>
 
@@ -79,11 +77,8 @@ GLuint ReversiWindow::loadShaders(const char* vertexFilePath, const char* fragme
 		VertexShaderCode=QString(VertexShaderFile.readAll()).toStdString();
 		VertexShaderFile.close();
 		vs_source = VertexShaderCode.c_str();
-		printf("%s\n",vs_source);
 	}
 	else{
-		printf("Impossible to open %s. Are you in the right directory ?"
-			   "Don't forget to read the FAQ !\n", vertexFilePath);
 		return 0;
 	}
 
@@ -93,63 +88,23 @@ GLuint ReversiWindow::loadShaders(const char* vertexFilePath, const char* fragme
 		FragmentShaderCode=QString(FragmentShaderFile.readAll()).toStdString();
 		FragmentShaderFile.close();
 		fs_source = FragmentShaderCode.c_str();
-		printf("%s\n",fs_source);
 	}
 	else{
-		printf("Impossible to open %s. Are you in the right directory ?"
-			"Don't forget to read the FAQ !\n", fragmentFilePath);
 		return 0;
 	}
 
-	//compile vertex shader
-	printf("Compiling shader : %s\n", vertexFilePath);
+	// Compile vertex shader
 	glShaderSource(vs,1,&vs_source,NULL);
 	glCompileShader(vs);
 	// Compile Fragment Shader
-	printf("Compiling shader : %s\n", fragmentFilePath);
 	glShaderSource(fs, 1, &fs_source , NULL);
 	glCompileShader(fs);
-
-#ifdef _DEBUG
-	GLint Result = GL_FALSE;
-	int InfoLogLength;
-	// Check Vertex Shader
-	glGetShaderiv(vs, GL_COMPILE_STATUS, &Result);
-	glGetShaderiv(vs, GL_INFO_LOG_LENGTH, &InfoLogLength);
-	if ( InfoLogLength > 0 ){
-		std::vector<char> VertexShaderErrorMessage(InfoLogLength+1);
-		glGetShaderInfoLog(vs, InfoLogLength, NULL, &VertexShaderErrorMessage[0]);
-		printf("in %s:\n%s\n", vertexFilePath, &VertexShaderErrorMessage[0]);
-	}
-
-	// Check Fragment Shader
-	glGetShaderiv(fs, GL_COMPILE_STATUS, &Result);
-	glGetShaderiv(fs, GL_INFO_LOG_LENGTH, &InfoLogLength);
-	if ( InfoLogLength > 0 ){
-		std::vector<char> FragmentShaderErrorMessage(InfoLogLength+1);
-		glGetShaderInfoLog(fs, InfoLogLength, NULL, &FragmentShaderErrorMessage[0]);
-		printf("in %s:\n%s\n", fragmentFilePath, &FragmentShaderErrorMessage[0]);
-	}
-#endif /* DEBUG */
-
 	// Link the program
-	printf("Linking program\n");
 	program = glCreateProgram();
 	glAttachShader(program, vs);
 	glAttachShader(program, fs);
 	glLinkProgram(program);
-
-#ifdef _DEBUG
-	// Check the program
-	glGetProgramiv(program, GL_LINK_STATUS, &Result);
-	glGetProgramiv(program, GL_INFO_LOG_LENGTH, &InfoLogLength);
-	if ( InfoLogLength > 0 ){
-		std::vector<char> ProgramErrorMessage(InfoLogLength+1);
-		glGetProgramInfoLog(program, InfoLogLength, NULL, &ProgramErrorMessage[0]);
-		printf("%s\n", &ProgramErrorMessage[0]);
-	}
-#endif /* DEBUG */
-
+	// Delete shader
 	glDeleteShader(vs);
 	glDeleteShader(fs);
 

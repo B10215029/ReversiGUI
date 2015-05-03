@@ -1,7 +1,5 @@
 #version 430 core
 //fragment shader
-//uniform float time;
-//uniform vec2 mouse;
 uniform vec2 resolution;
 uniform int[64] data;
 out vec4 fragmentcolor; 
